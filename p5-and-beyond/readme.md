@@ -8,25 +8,45 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
 ### Outline
 
-1. While we set up, we will overview Vera Van de Seyp [Computational Knitting Patterns](https://www.media.mit.edu/projects/computational-knitting-patterns/overview/)'s project and its [interface](https://knit.veravandeseyp.com/), an instance of how we can make P5 and vanilla JS/HTML/CSS collaborate and utilize their respective advantages;
+1. [Set up](01)
+2. [Outline overview](02)
+3. [Navigation methods using P5](03)
+4. [Navigation using P5 rect(), text()](04)
+5. [Navigation using P5 createButton()][05]
+6. [P5 behind the scenes explanations](06)
+7. [Overview of HTML tags, class, ID](07)
+8. [Creating an HTML div with ID](08)
+9. [Creating an HTML button with class and ID](09)
+10. [HTML tags, class, ID as CSS selectors](10)
+11. [P5 functions that impact our CSS style](11)
+12. [Useful prebuilt CSS selectors save you so much time](12)
+13. [HTML event attribute: creating an event listener in HTML element](13)
+    \_\_
+14. [Changing the position of the command board using CSS](14);
+15. [Creating a canvas in HTML and calling it in P5](15);
+16. [Impacting elements outside the canvas with our new navigation system](16)
 
-2. Presentation of our goal for the workshop in index.html. By the end of the workshop, we will be able to have a navigation system (with buttons) outside of our P5 canvas that impacts our (very modest) game within our P5 canvas. This navigation system will be able to impact _other_ elements outside of the P5 canvas as well.
+### Step by step guide
 
-3. Starting from the index-p5.html file, we will overview 2 ways of creating a reactive button using P5.
+1. <a name="01"></a> While we set up, we will overview Vera Van de Seyp [Computational Knitting Patterns](https://www.media.mit.edu/projects/computational-knitting-patterns/overview/)'s project and its [interface](https://knit.veravandeseyp.com/), an instance of how we can make P5 and vanilla JS/HTML/CSS collaborate and utilize their respective advantages;
 
-4. In the first method, we are using P5 rect(), text(), and a general mousePressed() event listener.
+2. <a name="02"></a>Presentation of our goal for the workshop in index.html. By the end of the workshop, we will be able to have a navigation system (with buttons) outside of our P5 canvas that impacts our (very modest) game within our P5 canvas. This navigation system will be able to impact _other_ elements outside of the P5 canvas as well.
+
+3. <a name="03"></a>Starting from the index-p5.html file, we will overview 2 ways of creating a reactive button using P5.
+
+4. <a name="04"></a>In the first method, we are using P5 rect(), text(), and a general mousePressed() event listener.
 
    - This is the way I would have approached doing a button when I was starting coding. It is _doable_, but not the best practice if you want to keep your patience.
 
-5. In the second method, we are using the P5 [createButton()](https://p5js.org/reference/#/p5/createButton) function.
+5. <a name="05"></a>In the second method, we are using the P5 [createButton()](https://p5js.org/reference/#/p5/createButton) function.
 
    - Similar to the P5 createCanvas() we know and love, this allows for a _much shorter_ code to create a dynamic HTML button. Is the button _on_ the P5 Canvas, however? How can we stylize it to our liking?
 
-6. Exploring how P5 creates HTML tags _for us_ (canvas, button, ...).
+6. <a name="06"></a>Exploring how P5 creates HTML tags _for us_ (canvas, button, ...).
 
    - P5 createCanvas() and createButton() are shortcuts where P5 creates those tags for us _behind the scenes_. If we want more leeway to style and impact our button, we should do our _own buttons_ using manually written _HTML tags_.
 
-7. Overviewing of [**tags**](https://www.w3schools.com/tags/tag_html.asp), [**classes**](https://www.w3schools.com/html/html_classes.asp), and [**ID**](https://www.w3schools.com/html/html_id.asp) attributes and selectors. These tag names, class names, and IDs can be used to select elements in JavaScript and CSS very easily.
+7. <a name="07"></a>Overviewing of [**tags**](https://www.w3schools.com/tags/tag_html.asp), [**classes**](https://www.w3schools.com/html/html_classes.asp), and [**ID**](https://www.w3schools.com/html/html_id.asp) attributes and selectors. These tag names, class names, and IDs can be used to select elements in JavaScript and CSS very easily.
 
    - Tags are prebuilt in HTML. They have respective and specific attributes/functions/behaviours for each. Although _technically_ possible, it is not recommended to create your own. You have everything you need in the prebuilt HTML tags
 
@@ -41,18 +61,18 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
    - ID styling **overwrites** class styling. This means that you can style a _default_ style for all elements having the same class, and specify certain _custom_ styling properties using one element's unique ID.
 
-8. Creating a command-board HTML container using a div tag and an ID;
+8. <a name="08"></a>Creating a command-board HTML container using a div tag and an ID;
 
-9. Creating a button tag to go left + a button tag to go right, with a general class name and a respectively specific ID name.
+9. <a name="09"></a>Creating a button tag to go left + a button tag to go right, with a general class name and a respectively specific ID name.
 
-10. Revising tags, classes, and ID selectors in your CSS stylesheet.
+10. <a name="10"></a>Revising tags, classes, and ID selectors in your CSS stylesheet.
 
     - Tag names can be selected as is;
     - Class name should have a dot in front of them;
     - IDs should have a # in front of them
     - There are **[many](https://www.w3schools.com/cssref/css_selectors.php)** different selectors prebuilt in CSS, you should have a look.
 
-11. Considering how P5 uses its functions to impact the CSS style of the document.
+11. <a name="11"></a>Considering how P5 uses its functions to impact the CSS style of the document.
 
     - P5 fill() === CSS background-color;
     - P5 stroke(),strokeWeight(), noStroke(), ... === CSS border;
@@ -60,12 +80,12 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
     - N.B. : The best (and only?) way to learn CSS is with documentation and trial-and-error. Have [W3](https://www.w3schools.com/css/default.asp)'s CSS section on speed-dial at all times is my way to go.
 
-12. Exploring how _very little_ CSS code allows extensive styling options when using the right selector.
+12. <a name="12"></a>Exploring how _very little_ CSS code allows extensive styling options when using the right selector.
 
     - The [:hover](https://www.w3schools.com/cssref/sel_hover.php) selector allows for specific styling _only_ when the cursor is above the element (this could be done with a _very lengthy_ P5 if() statement);
     - The [:active](https://www.w3schools.com/cssref/sel_active.php) selector allows for a specific styling _only_ when the element has been activated (in the case of a button, the styling happens once you click the button for a very short period. This could be done using a length P5 if() statement and a setTimeout() function.)
 
-13. Creating an event listener using [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
+13. <a name="13"></a> Creating an event listener using [HTML Event Attributes](https://www.w3schools.com/tags/ref_eventattributes.asp)
 
     - There are _many_ ways to create an event listener for an HTML element using JavaScript. While documenting yourself, you will likely find ways to create an [HTML DOM EventListener](https://www.w3schools.com/js/js_htmldom_eventlistener.asp) using the native AddEventListener() JS function. Both can be used, and they ultimately function similarly. They are just _called_ in different places: an HTML event attribute is called in your .html file inside of a tag element, whereas the DOM event listener is called in your script.
     - To create an HTML event listener, look up on the [documentation page](https://www.w3schools.com/tags/ref_eventattributes.asp) what is the specific event you want to be listening to.
@@ -78,15 +98,15 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
     ### Bonus
 
-14. Changing the position of the command board.
+14. <a name="14"></a>Changing the position of the command board.
 
     - It is now **much easier** to edit how our command board looks. Want to put it on the top of your screen? Just change its bottom/top position in your CSS stylesheet and _everything_ inside of the container will behave accordingly. You don't need to change all the x, y, positions, rect(), ..., anymore.
 
-15. Manually creating an HTML canvas tag and _calling_ it in P5, as opposed to _creating_ a P5 canvas in your script.
+15. <a name="15"></a>Manually creating an HTML canvas tag and _calling_ it in P5, as opposed to _creating_ a P5 canvas in your script.
 
     - There are many reasons you may want to select instead of create your P5 canvas in your script. You may want your canvas placed at a very specific spot on your website, and P5 is not great at knowing where you want that canvas to be. It will generally just put it at the end of your document.
     - If you want your canvas specifically placed, manually create an HTML canvas tag and call it with a specific ID.
     - Using the native JavaScript [document.getElementById("name-of-ID")](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) function, insert it as a _third_ parameter inside your P5 createCanvas() function.
 
-16. Adding a new button and changing things _outside_ the canvas
+16. <a name="16"></a>Adding a new button and changing things _outside_ the canvas
     - Now that your navigation is outside of the P5 Canvas, you can impact things _everywhere_ on your website's document. A new navigatable button could then make objects appear & disappear, or behave in all sorts of ways, anywhere on your page.
