@@ -19,10 +19,10 @@ body {
 
 /* removes default button style */
 button {
-  background: none;
+  /* background: none;
   border: none;
   outline: none;
-  box-shadow: none;
+  box-shadow: none; */
 }
 
 /* Everything above this comment removes default styling, so our styling does not get random properties */

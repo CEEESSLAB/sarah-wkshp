@@ -17,7 +17,7 @@ let playerPosX = 250;
 // const RightBtnY = 450;
 
 function setup() {
-  // createCanvas(500, 500);
+  createCanvas(500, 500);
 }
 
 function draw() {

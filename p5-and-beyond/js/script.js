@@ -36,6 +36,6 @@ function moveRight() {
   playerPosX = playerPosX + 10;
 }
 
-function doSomethingElse() {
-  document.getElementById("a-new-element").classList.toggle("hide-the-element");
-}
+// function doSomethingElse() {
+//   document.getElementById("a-new-element").classList.toggle("hide-the-element");
+// }
