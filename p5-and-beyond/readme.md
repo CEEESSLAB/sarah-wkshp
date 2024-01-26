@@ -78,15 +78,15 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
     ### Bonus
 
-    1. Changing the position of the command board.
+14. Changing the position of the command board.
 
-       - It is now **much easier** to edit how our command board looks. Want to put it on the top of your screen? Just change its bottom/top position in your CSS stylesheet and _everything_ inside of the container will behave accordingly. You don't need to change all the x, y, positions, rect(), ..., anymore.
+    - It is now **much easier** to edit how our command board looks. Want to put it on the top of your screen? Just change its bottom/top position in your CSS stylesheet and _everything_ inside of the container will behave accordingly. You don't need to change all the x, y, positions, rect(), ..., anymore.
 
-    2. Manually creating an HTML canvas tag and _calling_ it in P5, as opposed to _creating_ a P5 canvas in your script.
+15. Manually creating an HTML canvas tag and _calling_ it in P5, as opposed to _creating_ a P5 canvas in your script.
 
-       - There are many reasons you may want to select instead of create your P5 canvas in your script. You may want your canvas placed at a very specific spot on your website, and P5 is not great at knowing where you want that canvas to be. It will generally just put it at the end of your document.
-       - If you want your canvas specifically placed, manually create an HTML canvas tag and call it with a specific ID.
-       - Using the native JavaScript [document.getElementById("name-of-ID")](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) function, insert it as a _third_ parameter inside your P5 createCanvas() function.
+    - There are many reasons you may want to select instead of create your P5 canvas in your script. You may want your canvas placed at a very specific spot on your website, and P5 is not great at knowing where you want that canvas to be. It will generally just put it at the end of your document.
+    - If you want your canvas specifically placed, manually create an HTML canvas tag and call it with a specific ID.
+    - Using the native JavaScript [document.getElementById("name-of-ID")](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) function, insert it as a _third_ parameter inside your P5 createCanvas() function.
 
-    3. Adding a new button and changing things _outside_ the canvas
-       - Now that your navigation is outside of the P5 Canvas, you can impact things _everywhere_ on your website's document. A new navigatable button could then make objects appear & disappear, or behave in all sorts of ways, anywhere on your page.
+16. Adding a new button and changing things _outside_ the canvas
+    - Now that your navigation is outside of the P5 Canvas, you can impact things _everywhere_ on your website's document. A new navigatable button could then make objects appear & disappear, or behave in all sorts of ways, anywhere on your page.
