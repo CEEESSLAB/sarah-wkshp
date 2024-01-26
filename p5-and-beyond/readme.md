@@ -8,23 +8,23 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
 
 ### Outline
 
-1. [Set up](01)
-2. [Outline overview](02)
-3. [Navigation methods using P5](03)
-4. [Navigation using P5 rect(), text()](04)
-5. [Navigation using P5 createButton()](05)
-6. [P5 behind the scenes explanations](06)
-7. [Overview of HTML tags, class, ID](07)
-8. [Creating an HTML div with ID](08)
-9. [Creating an HTML button with class and ID](09)
-10. [HTML tags, class, ID as CSS selectors](10)
-11. [P5 functions that impact our CSS style](11)
-12. [Useful prebuilt CSS selectors save you so much time](12)
-13. [HTML event attribute: creating an event listener in HTML element](13)
+1. [Set up](#01)
+2. [Outline overview](#02)
+3. [Navigation methods using P5](#03)
+4. [Navigation using P5 rect(), text()](#04)
+5. [Navigation using P5 createButton()](#05)
+6. [P5 behind the scenes explanations](#06)
+7. [Overview of HTML tags, class, ID](#07)
+8. [Creating an HTML div with ID](#08)
+9. [Creating an HTML button with class and ID](#09)
+10. [HTML tags, class, ID as CSS selectors](#10)
+11. [P5 functions that impact our CSS style](#11)
+12. [Useful prebuilt CSS selectors save you so much time](#12)
+13. [HTML event attribute: creating an event listener in HTML element](#13)
     \_\_
-14. [Changing the position of the command board using CSS](14);
-15. [Creating a canvas in HTML and calling it in P5](15);
-16. [Impacting elements outside the canvas with our new navigation system](16)
+14. [Changing the position of the command board using CSS](#14);
+15. [Creating a canvas in HTML and calling it in P5](#15);
+16. [Impacting elements outside the canvas with our new navigation system](#16)
 
 ### Step by step guide
 
@@ -108,5 +108,5 @@ Develop an understanding of vanilla JavaScript and how to incorporate it with th
     - If you want your canvas specifically placed, manually create an HTML canvas tag and call it with a specific ID.
     - Using the native JavaScript [document.getElementById("name-of-ID")](https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementById) function, insert it as a _third_ parameter inside your P5 createCanvas() function.
 
-16. <a href="16"></a>Adding a new button and changing things _outside_ the canvas
+16. <a name="16"></a>Adding a new button and changing things _outside_ the canvas
     - Now that your navigation is outside of the P5 Canvas, you can impact things _everywhere_ on your website's document. A new navigatable button could then make objects appear & disappear, or behave in all sorts of ways, anywhere on your page.
